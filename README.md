@@ -7,7 +7,7 @@ Enter a topic, pick a time, and every day at that time an AI-written, AI-narrate
 
 Built as the take-home for the **Full-Stack + AI Engineer** role at **Gnani.ai**.
 
-[Live demo](#) · [API](#) · [Video walkthrough](#)
+[Live demo](https://scheduled-research-to-podcast-agent-mocha.vercel.app) · [API](https://scheduled-research-to-podcast-agent.onrender.com) · [Video walkthrough](https://drive.google.com/file/d/1EgjjijCWD_jNJI6aA0RPn2XB02qHMGgQ/view?usp=sharing)
 
 </div>
 
