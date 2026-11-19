@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --fg: #09090b;
+  --muted: #71717a;
+  --subtle: #f4f4f5;
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+  --ring: #18181b;
+}
+
+html {
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-feature-settings: "cv11", "ss01", "ss03";
+  font-variant-ligatures: common-ligatures;
+}
+
+/* Focus rings — accessible but not ugly */
+*:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Subtle fade-in for page content */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.35s ease-out;
+}
+
+/* Pulsing dot for active status */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.85); }
+}
+.animate-pulse-dot {
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+/* Waveform shimmer while loading */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    #f4f4f5 0px,
+    #e4e4e7 200px,
+    #f4f4f5 400px
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+/* Native audio element — just slightly nicer border */
+audio {
+  width: 100%;
+  border-radius: 12px;
+}
+audio::-webkit-media-controls-panel {
+  background: #fafafa;
+}
